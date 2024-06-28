@@ -1,0 +1,16 @@
+#navbar {
+  font-family: monospace;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar li {
+  margin: 10px;
+}
