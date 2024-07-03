@@ -1,6 +1,11 @@
-import "./App.css";
-import Navbar from "./components/navbar";
+import { useState } from "react";
+import ResumeHeader from "./components/ResumeHeader";
+import "./styles/App.css";
 
 export default function App() {
-  return <Navbar></Navbar>;
+  return (
+    <main>
+      <ResumeHeader />
+    </main>
+  );
 }
