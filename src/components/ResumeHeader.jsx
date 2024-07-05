@@ -8,7 +8,6 @@ export default function ResumeHeader() {
     number: "1111 1111",
     location: "Seattle, WA",
   });
-  let [links, setLinks] = useState([]);
 
   function handleInput(event) {
     let { name, value } = event.target;
@@ -16,11 +15,6 @@ export default function ResumeHeader() {
       ...formData,
       [name]: value,
     });
-  }
-
-  function handleLinkInput(event) {
-    let { value } = event.target;
-    setLinks([...links, value]);
   }
 
   return (
@@ -65,16 +59,6 @@ function FormItem({ form, value, handleInput }) {
         {form.charAt(0).toUpperCase() + form.slice(1)}:{" "}
       </label>
       <input type="text" name={form} value={value} onChange={handleInput} />
-    </div>
-  );
-}
-
-function HeaderLinks({ links, handleLinkInput }) {
-  return (
-    <div>
-      {links.map(link => (
-        <a href={link}>{link}</a>
-      ))}
     </div>
   );
 }
